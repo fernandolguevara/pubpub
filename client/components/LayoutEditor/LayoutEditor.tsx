@@ -51,7 +51,7 @@ const getTitleKindForBlock = (blockType: string) => {
 	return blockType;
 };
 
-const LayoutEditor = (props: Props) => {
+const LayoutEditor = React.memo((props: Props) => {
 	const { initialLayout, initialLayoutPubsByBlock, collection, communityData, onChange } = props;
 	const {
 		layout,
@@ -216,6 +216,6 @@ const LayoutEditor = (props: Props) => {
 			{layout.map(renderLayoutBlock)}
 		</div>
 	);
-};
+});
 
 export default LayoutEditor;
